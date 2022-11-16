@@ -1,0 +1,16 @@
+<h2 class="text-center">Car On Sales!</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 mb-3 text-center" *ngFor="let car of cars">
+            <a routerLink="/detail/{{car.id}}">
+                <img class="img-thumbnail" [src]="car.photo" [alt]="car.make + ' ' + car.model">
+                <div class="mt-3">
+                    <h5>{{car.make | uppercase}} {{car.model}}</h5>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="mt-5 text-center">
+    <button type="button" class="btn btn-secondary" (click)="goBack()">Back to Home</button>
+</div>
